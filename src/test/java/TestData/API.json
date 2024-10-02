@@ -1,0 +1,2085 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "description": "",
+        "id": "9f107262-3b55-4c12-a50f-3f8d6e7806b6",
+        "name": "Test Rishabb"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"administrateur\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"QUEODEV_OF\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "apimetier.com",
+              "path": "/authentification"
+            },
+            "id": "db61e4b6-8b33-4c9d-8b3d-61c5493e10b8",
+            "name": "APIauth",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/DEVIS/listedevis/DtcreDOC/2023/01/01/2023/12/31"
+            },
+            "id": "86eeca2a-7fcd-4c89-a2c7-fe24934d79a9",
+            "name": "DEVIS devis liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/DEVIS/listelettredemission/DtcreDOC/2000/01/01/2023/12/31"
+            },
+            "id": "f57cc79f-1ad5-431b-a4d5-9d5f18518909",
+            "name": "DEVIS lettredemission liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEzODkiLCJEYk5hbWUiOiJBVURJVENQQSIsIk1vZGUiOiIxIiwiUGFydGVuYWlyS2V5IjoiUXVlb3ZhbFBhcnRlbmFpckAiLCJVc2VyTmFtZSI6ImFkbWluaXN0cmF0ZXVyIiwibmJmIjoxNzIyMzQyMzAwLCJleHAiOjE3NTM4NzgzMDAsImlhdCI6MTcyMjM0MjMwMH0.zlDP6UIBd9qdaZaA1sezfRvYAFDpwGAH-AjA7eXYy2E"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/Elearning/CyclesElearning"
+            },
+            "id": "14e2a04e-6d1f-479e-81ef-a4ba3fb204ee",
+            "name": "ELEARNING  cycle liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/Extranet/infolicences"
+            },
+            "id": "6275f394-d382-486f-90ce-881cdc290c2f",
+            "name": "EXTRANET  infolicences",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/Extranet/listeaccess/false/true"
+            },
+            "id": "c48e6f6f-f853-4d9a-9f27-e9e26e292377",
+            "name": "EXTRANET  liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "name": "where",
+                    "value": ""
+                  },
+                  {
+                    "name": "offset",
+                    "value": "0"
+                  },
+                  {
+                    "name": "fetch",
+                    "value": "50"
+                  },
+                  {
+                    "name": "orderby",
+                    "value": ""
+                  }
+                ]
+              },
+              "host": "${\"serveur\"}",
+              "path": "/PM/clients"
+            },
+            "id": "d05553d1-96bd-4991-bd7d-6d5279c45097",
+            "name": "PM liste client",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "offset",
+                    "value": "0"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "fetch",
+                    "value": "20"
+                  }
+                ]
+              },
+              "host": "${\"serveur\"}",
+              "path": "/PM/fournisseurs"
+            },
+            "id": "a504ff71-2f46-4526-9008-1a96cb64ed6a",
+            "name": "PM liste fournisseurs",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "name": "offset",
+                    "value": "0"
+                  },
+                  {
+                    "name": "fetch",
+                    "value": "20"
+                  }
+                ]
+              },
+              "host": "${\"serveur\"}",
+              "path": "/PM/prospects"
+            },
+            "id": "6efb1900-f418-44e0-84a7-e03dbeab07ee",
+            "name": "PM liste prospects",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/PP/contacts"
+            },
+            "id": "2ba8c752-57a0-41f5-b879-b945382fd181",
+            "name": "PP contact liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/PP/collaborateurs"
+            },
+            "id": "8198b196-31e9-4ee2-a13f-b9c7c9ada9a4",
+            "name": "PP liste collaborateur",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/PP/formateurs"
+            },
+            "id": "bc0d2922-2e06-4b59-812d-06f7ca115cf0",
+            "name": "PP liste formateurs",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc5789",
+              "name": "PATCH"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "[\n\"83074\"\n]\n"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/cloturestages"
+            },
+            "id": "4e9f8a0d-b6da-4eaf-8ede-7966c9bcf3c1",
+            "name": "STAGE cloture stage",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/listeconventions/DtcreDOC/2023/01/01/2023/01/31"
+            },
+            "id": "9793c132-ddca-49c8-8f5e-41151538b7af",
+            "name": "STAGE convention liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/listecursus"
+            },
+            "id": "df30b686-5a69-42fd-8f64-d5a6d87684f2",
+            "name": "STAGE cursus liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/listecontratsformateurs"
+            },
+            "id": "674cfe6e-0c31-4544-86b6-a013872b09a3",
+            "name": "STAGE liste contra formateur",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/recapitulatifs/2020/01/01/2024/12/31"
+            },
+            "id": "30763470-b65a-4e8d-ade1-5839552e1567",
+            "name": "STAGE recapitulatif",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/listestagesacloturer/2024/01/01"
+            },
+            "id": "a0cd26bf-11de-40cc-ab1b-f498ba04f00f",
+            "name": "STAGE stage a cloturer",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n\"CompteAppAutantDefoisQuilvient\": true,\n\"RepartitionparAnnee\": false,\n\"GestionNbParGroupe\": true,\n\"DebutExercice\": \"2023-01-01T18:11:39.41Z\",\n\"FinExercice\": \"2023-12-01T18:11:39.41Z\",\n\"CalculNouvelFacturation\": true,\n\"EntiteFacturation\": null,\n\"IdentStage\": null,\n\"AutreProduit\": \"1\",\n\"CA_Total\": \"2\",\n\"Total_Charge\": \"3\",\n\"Salaires\": \"4\",\n\"Achat_Prestation\": \"5\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/bpfanomalies"
+            },
+            "id": "e6372d77-88f4-4538-909b-835b73c8633d",
+            "name": "bpf anomalie",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n\"CompteAppAutantDefoisQuilvient\": true,\n\"RepartitionparAnnee\": false,\n\"GestionNbParGroupe\": true,\n\"DebutExercice\": \"2023-01-01T18:11:39.41Z\",\n\"FinExercice\": \"2023-12-01T18:11:39.41Z\",\n\"CalculNouvelFacturation\": true,\n\"EntiteFacturation\": null,\n\"IdentStage\": null,\n\"AutreProduit\": \"1\",\n\"CA_Total\": \"2\",\n\"Total_Charge\": \"3\",\n\"Salaires\": \"4\",\n\"Achat_Prestation\": \"5\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/bpfcalculs"
+            },
+            "id": "326c381c-420e-43ba-8099-43bc226dcb8a",
+            "name": "bpf calcul",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/bpfinitialise"
+            },
+            "id": "2f9d738f-2202-449f-b533-39b5e05c42b9",
+            "name": "bpf initialise",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n\"CompteAppAutantDefoisQuilvient\": true,\n\"RepartitionparAnnee\": false,\n\"GestionNbParGroupe\": true,\n\"DebutExercice\": \"2023-01-01T18:11:39.41Z\",\n\"FinExercice\": \"2023-12-01T18:11:39.41Z\",\n\"CalculNouvelFacturation\": true,\n\"EntiteFacturation\": null,\n\"IdentStage\": null,\n\"AutreProduit\": \"1\",\n\"CA_Total\": \"2\",\n\"Total_Charge\": \"3\",\n\"Salaires\": \"4\",\n\"Achat_Prestation\": \"5\",\n\"Code_Cerfa\":\"F4_nb_1\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STAGE/bpfliste"
+            },
+            "id": "a9b77457-6f82-4add-9822-f6f531ad28ff",
+            "name": "bpf liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "[\n\n  {\n    \"Key\": \"DT\",\n    \"Value\": \"Date_FDT|01/05/2007||Date_FDT|31/12/2024|\"\n  }\n]"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/EDITION/data/ques_DetailPrat"
+            },
+            "id": "906e8cca-11aa-45da-a4a4-e1c6d6bc0448",
+            "name": "edition data",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "[\n  {\n    \"Key\": \"CD\",\n    \"Value\": \"string\"\n  }\n]"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/EDITION/filtres/ques_DetailPrat"
+            },
+            "id": "20487f32-b477-4330-8fc3-d288502ff9a7",
+            "name": "edition filtre",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "[\n  {\n    \"Key\": \"CD\",\n    \"Value\": \"string\"\n  }\n]"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/EDITION/param/ques_DetailPrat"
+            },
+            "id": "b476eac0-08b6-4a2a-bb50-d571097e1d8e",
+            "name": "edition parametre",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/groupeanalytique"
+            },
+            "id": "db1235aa-80b9-4a00-a386-e8d2d2e6c4b1",
+            "name": "facturation ANA liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1NTE4IiwiRGJOYW1lIjoiVEVTVEZSX0ZPUk1BVElPTiIsIk1vZGUiOiIxIiwiUGFydGVuYWlyS2V5IjoiUXVlb3ZhbFBhcnRlbmFpckAiLCJVc2VyTmFtZSI6InJvdmFuaXJpbmFAbm92aXR5LmlvIiwibmJmIjoxNzE4NjkzNDE0LCJleHAiOjE3NTAyMjk0MTQsImlhdCI6MTcxODY5MzQxNH0.AbgZYAtkcnOhDfkIKEplU8vcC1p4rhtlp77aQEwK3TE"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/codejournaux/1348"
+            },
+            "id": "b00973f8-c993-43c2-a7cb-39cef76f81f9",
+            "name": "facturation CJ liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/taxeTVA"
+            },
+            "id": "7c4d6b8b-af51-4c36-b1e2-85152fa7a09b",
+            "name": "facturation TVA liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "name": "TaxeTerritorialite",
+                    "value": "EXO"
+                  }
+                ]
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/articles"
+            },
+            "id": "0dc0fdbd-8908-4d51-a931-6ce453a00332",
+            "name": "facturation article liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "name": "TaxeTerritorialite",
+                    "value": "EXO"
+                  }
+                ]
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/bareme/CHANCELLERIE"
+            },
+            "id": "36f17eb5-26cf-469c-b317-98b080cc3612",
+            "name": "facturation bareme liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1NTE4IiwiRGJOYW1lIjoiVEVTVEZSX0ZPUk1BVElPTiIsIk1vZGUiOiIxIiwiUGFydGVuYWlyS2V5IjoiUXVlb3ZhbFBhcnRlbmFpckAiLCJVc2VyTmFtZSI6InJvdmFuaXJpbmFAbm92aXR5LmlvIiwibmJmIjoxNzE4NjkzNDE0LCJleHAiOjE3NTAyMjk0MTQsImlhdCI6MTcxODY5MzQxNH0.AbgZYAtkcnOhDfkIKEplU8vcC1p4rhtlp77aQEwK3TE"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/plancompte"
+            },
+            "id": "35f89936-d467-4366-868a-a044db500787",
+            "name": "facturation compte liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/facturation/contactfacturation/90751"
+            },
+            "id": "4ee05db7-da9e-4536-a497-dfe27a7b5a5b",
+            "name": "facturation contact facturation",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/facturation/listeentite"
+            },
+            "id": "26238f60-0fe5-4c44-9bce-10b65ce6c35f",
+            "name": "facturation liste entite facturation",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/facturation/modefacturationdefaut/1348"
+            },
+            "id": "3e8e5a03-a8c6-4ee5-8f3b-f3ca272f4f8f",
+            "name": "facturation mode facturation par defaut",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "groupe",
+                    "value": "80617"
+                  },
+                  {
+                    "name": "TaxeTerritorialite",
+                    "value": "EXO"
+                  }
+                ]
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/planfacturation/1348"
+            },
+            "id": "ed450203-44d6-44d2-9726-52f21fd36a35",
+            "name": "facturation planfactur liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/typetaxe"
+            },
+            "id": "e31655c1-bb3c-4a24-9118-7fe5cd45ef70",
+            "name": "facturation taxes liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"BRUNO_OF\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/DOC/contrats/formateur/84838"
+            },
+            "id": "f08828c4-faef-4555-8ef8-2a2599e6c3a6",
+            "name": "formateur_contrat",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"BRUNO_OF\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/DOC/courriers/formateur/80865"
+            },
+            "id": "fb868f09-2990-46aa-b4e8-7389fcc668e5",
+            "name": "formateur_courriers",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"BRUNO_OF\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/DOC/documents/formateur/91311"
+            },
+            "id": "9d2b50b4-7383-44d1-af44-d448833b3e42",
+            "name": "formateur_document",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzE0Mzk0OTQyLCJleHAiOjE3NDU5MzA5NDIsImlhdCI6MTcxNDM5NDk0Mn0.st3yZwHtghX9BAaJCPayaAIqdpP2d185XOy6k9B9mb8"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/adresses"
+            },
+            "id": "9539ed99-b633-414b-a2bc-c33843cd198b",
+            "name": "liste des adresses",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/bureaux"
+            },
+            "id": "0c45b1fa-18e9-4e61-89bb-2e15d7fcfa42",
+            "name": "liste des bureaux",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/DEVIS/listelettredemission/DtcreDOC/2024/01/01/2024/06/31"
+            },
+            "id": "ea350991-f268-4e15-ab08-50050c6c57f2",
+            "name": "liste des lettres de missions",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/PORTAIL/listevignette/accueil"
+            },
+            "id": "72674551-7b81-43e8-a539-181bd9e89b31",
+            "name": "liste des vignettes",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "groupe",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "TaxeTerritorialite",
+                    "value": "DOMTOM"
+                  }
+                ]
+              },
+              "host": "${\"serveur\"}",
+              "path": "/FACTURATION/planfacturation/1348"
+            },
+            "id": "39a4b366-eba7-4f16-a4ce-d3fc9d1037ea",
+            "name": "planfacturationArticle",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"ListFactures\": [\n    {\n      \"Ident\": \"string\",\n      \"IdEntite\": \"string\",\n      \"IdClient\": \"string\",\n      \"TitreFacture\": \"string\",\n      \"StrDateFacture\": \"string\",\n      \"Email\": \"string\"\n    }\n  ],\n  \"PathPdfMerged\": \"string\",\n  \"FileNamePdfMerged\": \"string\",\n  \"HasTokenAPI\": true\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/smtp/models/STAGE"
+            },
+            "id": "ff73c6b9-2591-474a-a013-2aceb6f60128",
+            "name": "smtp liste models",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"ListFactures\": [\n    {\n      \"Ident\": \"string\",\n      \"IdEntite\": \"string\",\n      \"IdClient\": \"string\",\n      \"TitreFacture\": \"string\",\n      \"StrDateFacture\": \"string\",\n      \"Email\": \"string\"\n    }\n  ],\n  \"PathPdfMerged\": \"string\",\n  \"FileNamePdfMerged\": \"string\",\n  \"HasTokenAPI\": true\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/smtp/planifie"
+            },
+            "id": "96af0697-08ed-4577-a47d-f01f32b87bd4",
+            "name": "smtp liste plannifier smtp",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/bureaux"
+            },
+            "id": "76076b25-531a-4b8f-b8f1-e4cd92439b3d",
+            "name": "storage bureaux liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/collaborateurs"
+            },
+            "id": "6e73d055-e22e-48ea-b7f7-d0b354f9e5e5",
+            "name": "storage collaborateurs liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/listCombo/PROP_BO_MODEFACT_strGrMFA"
+            },
+            "id": "8330ad0a-806b-4b62-8665-8554257071a5",
+            "name": "storage combo liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/client/doublons/false/true/false/false/false"
+            },
+            "id": "45efd594-6f8f-4d6e-9bdd-6c7ed96d024e",
+            "name": "storage doublon client",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/client/fusion/82457/83283"
+            },
+            "id": "c6fcdc58-c5be-42af-a370-14df78cc0e11",
+            "name": "storage doublon liste fusion client",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/bureaux/findCollabo/b"
+            },
+            "id": "20a56fe4-dc6d-4e1a-9d15-6c8d771204a5",
+            "name": "storage find new collaborateur",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/EDITION/filtres/ques_DetailPrat"
+            },
+            "id": "d41e9a05-23bf-490f-8144-1789e0c0fc93",
+            "name": "storage liste des editions",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/organisme"
+            },
+            "id": "f90661b2-2146-48a1-a798-fa886d1eb2a6",
+            "name": "storage organisme",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": ""
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/organisme"
+            },
+            "id": "10d9907a-cb75-442c-8abd-cba86b1182b7",
+            "name": "storage profil",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"username\": \"BARBERA\",\n  \"password\": \"ServAuth*34\",\n  \"mode\":1,\n  \"dbname\": \"TESTFR_FORMATION\",\n  \"partenairkey\": \"QueovalPartenair@\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "host": "${\"serveur\"}",
+              "path": "/STORAGE/roles"
+            },
+            "id": "40fc36a9-47c9-428e-8b2b-702e6697b1bb",
+            "name": "storage role liste",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgwNzc2IiwiRGJOYW1lIjoiQlJVTk9fT0YiLCJNb2RlIjoiMSIsIlBhcnRlbmFpcktleSI6IlF1ZW92YWxQYXJ0ZW5haXJAIiwiVXNlck5hbWUiOiJCQVJCRVJBIiwibmJmIjoxNzEwMjM4MTQ4LCJleHAiOjE3NDE3MzQwMDAsImlhdCI6MTcxMDIzODE0OH0.0OAYziaC8YTto8SUgM6BX1bskvmVQiVI2Nx3n6QA16A"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
