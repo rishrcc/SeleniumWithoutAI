@@ -2,17 +2,13 @@ package TestData;
 
 public class LoginData {
 
-    public static String testUrl = "https://applimetier.com/loginpreprod/#/";
-    //"https://applimetier.com/login/#/";
-    //"https://www.queoval.fr/login/";
-    //"http://localhost/login/#/";
+    public static String testUrl = "*****";
 
     public enum User_Rishabh {
 
-        USER_EMAIL("Rishabh@novity.io"),
-        USER_PASSWORD("Azerty34/"),
-        //USER_PASSWORD("Rishabh34@novity.io");
-        WEBSTORE_URL("https://inscriptionformation.com/WebStore/?info=UVVFT0RFVl9PRjphemVydHkxMjM");
+        USER_EMAIL("*****"),
+        USER_PASSWORD("*****"),
+        WEBSTORE_URL("*****");
 
         private final String value;
 
