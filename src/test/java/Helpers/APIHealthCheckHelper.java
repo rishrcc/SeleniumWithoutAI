@@ -103,7 +103,10 @@ public class APIHealthCheckHelper {
     public static void readJsonAndSendRequests() throws IOException, InterruptedException {
 
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode rootNode = mapper.readTree(new File("C:\\Queoval_Automation\\Queoval_Azure\\automation%20testing\\src\\test\\java\\TestData\\API.json"));
+
+        String projectDir = System.getProperty("user.dir");
+
+        JsonNode rootNode = mapper.readTree(new File(projectDir + "\\src\\test\\java\\TestData\\API.json"));
         JsonNode entitiesNode = rootNode.path("entities");
 
         for (JsonNode entityNode : entitiesNode) {

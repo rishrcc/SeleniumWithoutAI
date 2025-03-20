@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/Features", // Path to your feature file(s)
         glue = {"StepDefinitions", "Utility"},// Package where your step definitions are located
-        //tags = "@Test",
+        tags = "@Test",
         plugin = {"pretty", "html:target/cucumber-html-reports.html", "json:cucumber.json", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
-public class TestRunner {
+public class TestRunnerAll {
 
 }

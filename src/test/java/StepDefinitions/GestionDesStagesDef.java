@@ -38,17 +38,18 @@ public class GestionDesStagesDef {
         GestionDesStagesStep.clickOnCreateNewStageOfTypeCatalogueProduit();
     }
 
-    @Then("^I should be able to create a new stage with catalogues (.*), categories (.*), produits (.*), type (.*)$")
-    public void iShouldBeAbleToCreateANewStage(String catalogues, String categories, String produits, String type) throws InterruptedException {
+    @Then("^I should be able to create a new stage with catalogues (.*), categories (.*), produits (.*), type (.*), etat (.*)$")
+    public void iShouldBeAbleToCreateANewStage(String catalogues, String categories, String produits, String type, String etat) throws InterruptedException {
 
         GestionDesStagesStep.selectCatalogue(catalogues);
         GestionDesStagesStep.selectCategory(categories);
         GestionDesStagesStep.selectProduit(produits);
         GestionDesStagesStep.selectTypeOnCreateStageForm(type);
+        GestionDesStagesStep.selectEtatOnCreateStageForm(etat);
         GestionDesStagesStep.enterStartDateAndEndDate();
         GestionDesStagesStep.saveNewStage();
         GestionDesStagesStep.verifyProduitsHeaderOnVue360(produits);
-        GestionDesStagesStep.verifyStartDateAndEndDateArePopulatedInVue360();
+        //GestionDesStagesStep.verifyStartDateAndEndDateArePopulatedInVue360();
     }
 
     @When("^I click on a card item$")

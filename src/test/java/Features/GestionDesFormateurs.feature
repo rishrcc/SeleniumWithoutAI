@@ -1,7 +1,8 @@
+@Group1
 Feature: Gestion des Formateur
 
   @CreateANewFormateur
-  Scenario Outline: Verify that user can create a new formateur
+  Scenario Outline: Verify that user can create a new formateur with name <nom>
 
     Given I am on Gestion des formateur page
     When I click on New button for a formateur

@@ -1,15 +1,19 @@
+@Group2
 Feature: Gestion des Stages
 
   @CreationStage
-  Scenario Outline: Verify that user can create a new stage
+  Scenario Outline: Verify that user can create a new stage with type <type> and etat <etat>
 
     Given I am on Suivi des stages menu
     When I click on Creer un stage
-    Then I should be able to create a new stage with catalogues <catalogues>, categories <categories>, produits <produits>, type <type>
+    Then I should be able to create a new stage with catalogues <catalogues>, categories <categories>, produits <produits>, type <type>, etat <etat>
 
     Examples:
-      | catalogues    | categories   | produits       | type  |
-      | MON CATALOGUE | MA CATEGORIE | Formation Zoom | Inter |
+      | catalogues    | categories   | produits       | type    | etat                  |
+      | MON CATALOGUE | MA CATEGORIE | Formation Zoom | Inter   | En cours              |
+      | MON CATALOGUE | MA CATEGORIE | Formation Zoom | Intra   | A repositionner       |
+      | MON CATALOGUE | MA CATEGORIE | Formation Zoom | Session | A facturer maintenant |
+
 
   @CreationClientIndividuel @Effectif
   Scenario Outline: Verify that user can create entity of type INDIVIDUAL over stage 1

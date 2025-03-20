@@ -3,8 +3,10 @@ package Helpers;
 import Pages.*;
 import Utility.BrowserDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -40,8 +42,8 @@ public class DashboardHelper extends BrowserDriver {
     }
 
     public void clickOnMenuGrid() throws InterruptedException {
-        Thread.sleep(15000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(DashboardPage.menuGrid)));
+        Thread.sleep(25000);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(DashboardPage.menuGrid)));
         driver.findElement(By.xpath(DashboardPage.menuGrid)).click();
     }
 
@@ -98,7 +100,7 @@ public class DashboardHelper extends BrowserDriver {
 
     public void selectPersonneMoraleOfType(String type) throws InterruptedException {
         Thread.sleep(3000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(DashboardPage.btnListOfPersonneMorale)));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(DashboardPage.btnListOfPersonneMorale)));
         driver.findElement(By.xpath(DashboardPage.btnListOfPersonneMorale)).click();
 
         String parametrizedPersonneMoraleXpath = String.format(DashboardPage.optPersonneMoraleType, type);
@@ -130,7 +132,8 @@ public class DashboardHelper extends BrowserDriver {
         driver.findElement(By.xpath(xpath)).click();
     }
 
-    public void clickOnSave() {
+    public void clickOnSave() throws InterruptedException {
+        Thread.sleep(3000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(DashboardPage.btnRegister)));
         driver.findElement(By.xpath(DashboardPage.btnRegister)).click();
     }
@@ -141,6 +144,14 @@ public class DashboardHelper extends BrowserDriver {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(AdministrationPage.submenuClotureEnMasse)));
         driver.findElement(By.xpath(AdministrationPage.submenuClotureEnMasse)).click();
+    }
+
+    public void navigateToCatalogueProduits() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(AdministrationPage.menuCentreFormation)));
+        driver.findElement(By.xpath(AdministrationPage.menuCentreFormation)).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(AdministrationPage.submenuCatalogueProduits)));
+        driver.findElement(By.xpath(AdministrationPage.submenuCatalogueProduits)).click();
     }
 
 }

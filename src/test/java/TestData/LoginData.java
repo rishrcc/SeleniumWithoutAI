@@ -10,8 +10,9 @@ public class LoginData {
     public enum User_Rishabh {
 
         USER_EMAIL("Rishabh@novity.io"),
-        USER_PASSWORD("Azerty34/");
+        USER_PASSWORD("Azerty34/"),
         //USER_PASSWORD("Rishabh34@novity.io");
+        WEBSTORE_URL("https://inscriptionformation.com/WebStore/?info=UVVFT0RFVl9PRjphemVydHkxMjM");
 
         private final String value;
 

@@ -22,7 +22,8 @@ public class ClotureEnMasseDef {
 
     @And("^I select to retrieve all stages of the current year$")
     public void iSelectToRetrieveAllStagesOfTheCurrentYear() throws InterruptedException {
-        ClotureEnMasseStep.filterPeriodeByThisYear();
+        //ClotureEnMasseStep.filterPeriodeByThisYear();
+        ClotureEnMasseStep.filterPeriodeByAll();
     }
 
     @And("^I see that the end date of stage filter is populated by yesterday date$")
@@ -33,18 +34,21 @@ public class ClotureEnMasseDef {
     @Then("^I should be able to filter by type of stage (.*)$")
     public void iShouldBeAbleToFilterByTypeOfStageType_stage(String type_stage) throws InterruptedException {
         ClotureEnMasseStep.filterByTypeOfStage(type_stage);
+        ClotureEnMasseStep.clickOnSearchIcon();
         ClotureEnMasseStep.verifyFilteredTypeOfStage(type_stage);
     }
 
     @And("^I should be able to filter by state of stage (.*)$")
     public void iShouldBeAbleToFilterByStageOfStageState_stage(String state_stage) throws InterruptedException {
         ClotureEnMasseStep.filterByStateOfStage(state_stage);
+        ClotureEnMasseStep.clickOnSearchIcon();
         ClotureEnMasseStep.verifyFilteredStateOfStage(state_stage);
     }
 
     @And("^I should be able to filter by cursus of stage (.*)$")
     public void iShouldBeAbleToFilterByCursusOfStageCursus_stage(String cursus_stage) throws InterruptedException {
         ClotureEnMasseStep.filterByCursusOfStage(cursus_stage);
+        ClotureEnMasseStep.clickOnSearchIcon();
         ClotureEnMasseStep.verifyFilteredCursusOfStage(cursus_stage);
     }
 

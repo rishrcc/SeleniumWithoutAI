@@ -32,7 +32,7 @@ public class GestionDesFormateurHelper extends BrowserDriver {
     public void verifyGestionDesFormateurTitle() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(GestionDesFormateursPage.txtGestionDesFormateursTitle)));
         String actualGestionDesFormateurTitle = driver.findElement(By.xpath(GestionDesFormateursPage.txtGestionDesFormateursTitle)).getText();
-        String expectedGestionDesFormateurTitle = "Gestion des formateurs (angular)";
+        String expectedGestionDesFormateurTitle = "Gestion des formateurs";
         Assert.assertEquals(expectedGestionDesFormateurTitle, actualGestionDesFormateurTitle);
     }
 
@@ -57,7 +57,7 @@ public class GestionDesFormateurHelper extends BrowserDriver {
         dropdownTypeDeContrat.selectByVisibleText(type_de_contrat);
     }
 
-    public void clickOnSave() {
+    public void clickOnSave(){
         driver.findElement(By.xpath(GestionDesFormateursPage.btnSaveNewFormateur)).click();
     }
 

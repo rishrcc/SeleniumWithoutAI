@@ -1,3 +1,4 @@
+@Group2
 Feature: Gestion des Reglements
 
   @VerificationMontant

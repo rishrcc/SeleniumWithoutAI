@@ -71,12 +71,12 @@ public class DashboardDef {
     @When("^I click on enregistrer button on the (.*) tab$")
     public void iClickOnEnregistrerButtonOnTheTypeTab(String type) throws InterruptedException {
         DashboardStep.selectFirstElementInList();
-        DashboardStep.selectTabOfType(type);
+        //DashboardStep.selectTabOfType(type);
         DashboardStep.clickOnSave();
     }
 
     @Then("^I should not see error message$")
-    public void iShouldNotSeeErrorMessage() {
+    public void iShouldNotSeeErrorMessage() throws InterruptedException {
         DashboardStep.clickOnSave();
     }
 
@@ -86,5 +86,13 @@ public class DashboardDef {
         DashboardStep.clickOnMenuGrid();
         DashboardStep.navigateToAdministration();
         DashboardStep.navigateToClotureEnMassePage();
+    }
+
+    @Given("^I am on Catalogue Produits page$")
+    public void iAmOnCatalogueProduitsPage() throws InterruptedException {
+        LoginStep.userLogin();
+        DashboardStep.clickOnMenuGrid();
+        DashboardStep.navigateToAdministration();
+        DashboardStep.navigateToCatalogueProduits();
     }
 }

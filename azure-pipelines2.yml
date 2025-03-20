@@ -1,0 +1,62 @@
+schedules:
+  - cron: "30 6 * * *"
+    displayName: Daily build 6:30AM
+    always: true
+    branches:
+      include:
+        - main
+
+trigger: none
+
+pool:
+  vmImage: 'windows-latest'
+
+jobs:
+  - job: RunAutomatedTestsGroup2
+    steps:
+      - task: JavaToolInstaller@0
+        displayName: '[Precheck]: Use Java 21'
+        inputs:
+          versionSpec: '21'
+          jdkArchitectureOption: 'x64'
+          jdkSourceOption: 'PreInstalled'
+
+      - task: ms-autotest.screen-resolution-utility-task.screen-resolution-utlity-task.ScreenResolutionUtility@1
+        displayName: '[Precheck]: Set Screen Resolution'
+
+      - task: Maven@3
+        displayName: '[Run]: maven test & post result'
+        inputs:
+          mavenPomFile: 'pom.xml'
+          javaHomeOption: 'JDKVersion'
+          jdkArchitectureOption: 'x64'
+          publishJUnitResults: true
+          testResultsFiles: '**/surefire-reports/TEST-*.xml'
+          testRunTitle: 'test'
+          options: '-Dcucumber.filter.tags="@Group2"' # Filter tests by @Group1
+          mavenAuthenticateFeed: false
+          effectivePomSkip: false
+          sonarQubeRunAnalysis: false
+
+      - script: |
+          curl -Lo allure.tgz "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.30.0/allure-commandline-2.30.0.tgz"
+          tar -xzf allure.tgz
+          ./allure-2.30.0/bin/allure generate --single-file allure-results --clean
+        displayName: 'Generate Allure Results'
+        condition: always()
+
+      - task: PublishBuildArtifacts@1
+        displayName: '[Publish]: videos'
+        condition: always()
+        inputs:
+          PathtoPublish: src/test/java/Recording
+          ArtifactName: 'Records'
+          publishLocation: 'Container'
+
+      - task: PublishBuildArtifacts@1
+        displayName: 'Allure reports html'
+        condition: always()
+        inputs:
+          PathtoPublish: allure-report
+          ArtifactName: 'Reports'
+          publishLocation: 'Container'

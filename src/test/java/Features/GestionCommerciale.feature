@@ -1,3 +1,4 @@
+@Group1
 Feature: Gestion Commerciale
 
   @Prospect @Client

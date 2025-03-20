@@ -9,6 +9,7 @@ public class SuiviDesStagesPage {
     public static String txtEndDate = "//*[@id=\"DatefPRO\"]"; //xpath
     public static String headerCreationOfStage = "//h5[normalize-space()='Action']"; //xpath
     public static String dropdownTypeCreateStage = "(//select[@class='col q-main-select q-bo-select q-bo-wrap q-bo-required'])[3]"; //xpath
+    public static String dropdownEtatCreateStage = "//*[@id=\"Etat_PRO\"]"; //xpath
     public static String btnSaveStageForm = "div[class='d-flex align-items-center mb-4'] button[class='q-btn q-main ng-star-inserted']"; //css
     public static String cardCountLastInPlanifee = "//*[@id=\"0\"]/div/div[2]/cdk-virtual-scroll-viewport/div[1]/a[last()]/queoval-stage-pipe-card/div/div[3]/div[2]/div[3]/span"; //xpath
     public static String cardLastTitle = "//*[@id=\"0\"]/div/div[2]/cdk-virtual-scroll-viewport/div[1]/a[last()]/queoval-stage-pipe-card/div/div[2]/div[1]"; //xpath

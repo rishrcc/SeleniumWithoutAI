@@ -6,7 +6,7 @@ public class GestionDesFormateursPage {
     public static String btnNewFormateur = "//button[normalize-space()='Nouveau']"; //Xpath
     public static String txtInitiale = "//*[@id=\"TrigrPER\"]"; //xpath
     public static String dropdownTypeDeContratBPF = "//*[@id=\"TypCoPER\"]"; //xpath
-    public static String btnSaveNewFormateur = "//*[@id=\"boL1\"]/div[1]/button[2]"; //xpath
+    public static String btnSaveNewFormateur = "//*[@id=\"boL1\"]/div[1]/button[3]/i"; //xpath
     public static String lblCreatedFormateur = "//*[@id=\"contentapp\"]/formateurs/div/div/f-details/div/div/div[1]"; //xpath
     public static String countOfFormateur = "//*[@id=\"contentapp\"]/formateurs/div/div/formateurs-list/div/div[2]/formateur-card"; //xpath
     public static String menuSideBarGED = "//*[@id=\"contentapp\"]/formateurs/div/queoval-sidebar/div/div[2]/div[3]/div/div/q-sidebar-icon/div/i[1]"; //xpath

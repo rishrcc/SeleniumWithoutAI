@@ -1,4 +1,5 @@
-Feature: ASPX pages
+@Group2
+Feature: Recherche Personne Morale
 
   @RecherchePersonneMorale
   Scenario Outline: Verify that user can search a personne morale of type <type> and save the BO without any errors

@@ -67,6 +67,14 @@ public class GestionDesStagesHelper extends BrowserDriver {
         dropdown.selectByVisibleText(type);
     }
 
+    public void selectEtatOnCreateStageForm(String etat)
+    {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SuiviDesStagesPage.headerCreationOfStage)));
+        WebElement dropdownElement = driver.findElement(By.xpath(SuiviDesStagesPage.dropdownEtatCreateStage)); // Use the appropriate locator
+        Select dropdown = new Select(dropdownElement);
+        dropdown.selectByVisibleText(etat);
+    }
+
     public void saveNewStage()
     {
         driver.findElement(By.cssSelector(SuiviDesStagesPage.btnSaveStageForm)).click();
@@ -288,12 +296,12 @@ public class GestionDesStagesHelper extends BrowserDriver {
 
     public void enterStartDateAndEndDate() throws InterruptedException {
 
-        startDate = "06/02/2024";
+        startDate = "31/10/2024";
         Thread.sleep(2000);
         //driver.findElement(By.xpath(SuiviDesStagesPage.txtStartDate)).click();
         driver.findElement(By.xpath(SuiviDesStagesPage.txtStartDate)).sendKeys(startDate);
 
-        endDate = "07/02/2024";
+        endDate = "31/10/2024";
         Thread.sleep(2000);
         //driver.findElement(By.xpath(SuiviDesStagesPage.txtEndDate)).click();
         driver.findElement(By.xpath(SuiviDesStagesPage.txtEndDate)).sendKeys(endDate);

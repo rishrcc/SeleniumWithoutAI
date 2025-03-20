@@ -38,6 +38,15 @@ public class ClotureEnMasseHelper extends BrowserDriver {
         driver.findElement(By.xpath(ClotureEnMassePage.optionThisYear)).click();
     }
 
+    public void filterPeriodeByAll() throws InterruptedException {
+        Thread.sleep(3000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ClotureEnMassePage.listBoxFiltreSurLaPeriode)));
+        driver.findElement(By.xpath(ClotureEnMassePage.listBoxFiltreSurLaPeriode)).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ClotureEnMassePage.optionAll)));
+        driver.findElement(By.xpath(ClotureEnMassePage.optionAll)).click();
+    }
+
     public void filterByTypeOfStage(String type_stage) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ClotureEnMassePage.listBoxTypeDeStage)));
         driver.findElement(By.xpath(ClotureEnMassePage.listBoxTypeDeStage)).click();
@@ -58,11 +67,11 @@ public class ClotureEnMasseHelper extends BrowserDriver {
         driver.findElement(By.xpath(stateOfStage)).click();
     }
 
-    public void filterByCursusOfStage(String cursus_stage) {
+    public void filterByCursusOfStage(String cursus_stage) throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ClotureEnMassePage.listBoxCursusDuStage)));
         driver.findElement(By.xpath(ClotureEnMassePage.listBoxCursusDuStage)).click();
 
-        String cursusOfStage = String.format(ClotureEnMassePage.optionTypeEtatCursusStage, cursus_stage);
+        String cursusOfStage = String.format(ClotureEnMassePage.optionCursusDuStageTous, cursus_stage);
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cursusOfStage)));
         driver.findElement(By.xpath(cursusOfStage)).click();
@@ -145,6 +154,10 @@ public class ClotureEnMasseHelper extends BrowserDriver {
                 assertEquals(cursus_stage.toLowerCase(), actualText.toLowerCase());
             }
         }
+    }
+
+    public void clickOnSearchIcon(){
+        driver.findElement(By.xpath(ClotureEnMassePage.iconSearch)).click();
     }
 
     public void selectMultiplestages(int start, int end) throws InterruptedException {

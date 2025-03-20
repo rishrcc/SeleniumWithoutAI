@@ -1,3 +1,4 @@
+@Group1
 Feature: API health check
 
   @APIHealthCheck
